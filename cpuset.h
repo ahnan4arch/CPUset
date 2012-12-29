@@ -42,12 +42,14 @@ public:
   QGraphicsWidget *graphicsWidget ();
 
 public slots:
-  void setFrequency ( QString freq );
+  void setFrequency ( int freq );
   void setGovernor ( QString gov );
 
 private:
   Plasma::Label * m_freq;
+  Plasma::Label * m_sliderFreq;
   Plasma::Label * m_gov;
+  QList<QByteArray> m_frequencies;
   QGraphicsWidget * m_widget;
 private slots:
   void Refresh ( bool force = false );
